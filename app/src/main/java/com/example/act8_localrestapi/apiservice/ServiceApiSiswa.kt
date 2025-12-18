@@ -1,5 +1,6 @@
 package com.example.act8_localrestapi.apiservice
 
+import com.example.act8_localrestapi.modeldata.DataSiswa
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
