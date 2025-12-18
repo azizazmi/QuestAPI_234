@@ -1,4 +1,4 @@
-package com.example.act8_localrestapi.view.viewmodel
+package com.example.act8_localrestapi.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
