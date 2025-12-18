@@ -1,5 +1,13 @@
 package com.example.act8_localrestapi.apiservice
 
-interface ServiceApiSiswa {
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
 
+interface ServiceApiSiswa {
+    @GET("bacaTeman.php")
+    suspend fun getSiswa(): List<DataSiswa>
+
+    @POST("insertTM.php")
+    suspend fun postSiswaa(@Body dataSiswa: DataSiswa):retrofit2.Response<Void>
 }
