@@ -32,7 +32,7 @@ class DefaultContainerApp : ContainerApp {
                 prettyPrint = true
                 isLenient = true
             }.asConverterFactory("application/json".toMediaType())
-        )
+        ).build()
 
     private val retrofitService: ServiceApiSiswa by lazy {
         retrofit.create(ServiceApiSiswa::class.java)
