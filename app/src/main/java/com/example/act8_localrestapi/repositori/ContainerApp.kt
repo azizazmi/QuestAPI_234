@@ -14,7 +14,7 @@ interface ContainerApp {
 }
 
 class DefaultContainerApp : ContainerApp {
-    private val baseurl = "http:10.0.2.2/umyTI/"
+    private val baseurl = "http://10.0.2.2/PAM_act8_backendAPI/"
 
     val logging = HttpLoggingInterceptor().apply{
         level = HttpLoggingInterceptor.Level.BODY
@@ -34,7 +34,7 @@ class DefaultContainerApp : ContainerApp {
             }.asConverterFactory("application/json".toMediaType())
         )
 
-    private val retrofitService: RepositoryDataSiswa by lazy {
+    private val retrofitService: ServiceApiSiswa by lazy {
         retrofit.create(ServiceApiSiswa::class.java)
     }
 
