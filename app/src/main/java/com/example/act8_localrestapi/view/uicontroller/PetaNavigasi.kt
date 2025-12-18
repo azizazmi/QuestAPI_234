@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.act8_localrestapi.view.EntrySiswaScreen
 import com.example.act8_localrestapi.view.HomeScreen
 import com.example.act8_localrestapi.view.route.DestinasiEntry
 import com.example.act8_localrestapi.view.route.DestinasiHome
@@ -26,11 +27,11 @@ fun HostNavigasi(navController: NavHostController,
             HomeScreen(navigateToItemEntry = {
                 navController.navigate(DestinasiEntry.route) },
                 navigateToItemUpdate = {
-//                    navController.navigate("${DestinasiEntry.route}/${it}")
+                    navController.navigate("${DestinasiEntry.route}/${it}")
                 })
         }
         composable(DestinasiEntry.route) {
-//            EntrySiswaScreen(navigateBack = { navController.navigate(DestinasiHome.route)})
+            EntrySiswaScreen(navigateBack = { navController.navigate(DestinasiHome.route)})
         }
     }
 }
